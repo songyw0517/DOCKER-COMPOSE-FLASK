@@ -1,0 +1,15 @@
+FROM python:3.10.2-slim
+# /flask를 /app에 복사
+COPY /. /app
+WORKDIR /app
+# 환경변수 설정
+ENV FLASK_APP "manage:application"
+ENV FLASK_CONFIG "development"
+ENV FLASK_ENV "development"
+
+# 종속성 설치
+RUN pip install -r requirements/requirements.txt
+
+
+# 로컬 호스트로 설정
+ENTRYPOINT flask run --host=0.0.0.0 --port=50505

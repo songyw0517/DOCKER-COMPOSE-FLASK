@@ -1,0 +1,6 @@
+flask
+sejong-univ-auth
+flask-validation-extended
+flask_cors
+flask_jwt_extended
+mysql-connector-python
