@@ -10,8 +10,7 @@ services:
       - "50505:50505"
     links:
       - mysql
-    networks:
-      - my_network
+
   mysql:
     build:
       dockerfile: dockerfile.dev
@@ -22,7 +21,3 @@ services:
       - ./mysql/mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: scof
-    networks:
-      - my_network
-networks:
-  my_network:
