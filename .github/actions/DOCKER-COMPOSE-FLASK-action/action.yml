@@ -1,5 +1,3 @@
-name: Setup Node
-on: [push]
 jobs:
   my_first_job:
     steps:
